@@ -37,6 +37,21 @@ def main():
                 .replace('"https://raw.githubusercontent.com', '"' + reList[reI])
             fp = open("./tv/" + str(reI) + "/" + urlName + ".json", "w+", encoding='utf-8')
             fp.write(reqText)
+
+            # Create new JSON format
+            new_tvbox_data = {
+                "urls": [
+                    {
+                        "url": reqText,
+                        "name": urlName
+                    }
+                ]
+            }
+
+            # Write to tvbox.json
+            with open("./tvbox.json", "w+", encoding='utf-8') as fp1:
+                json.dump(new_tvbox_data, fp1, ensure_ascii=False, indent=2)    
+
     now = datetime.datetime.now()
     fp = open('README.md', "w+", encoding='utf-8')
     fp.write("# 提示\n\n")
