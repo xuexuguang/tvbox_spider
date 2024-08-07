@@ -41,7 +41,7 @@ def main():
             fp.write(reqText)
 
             
-            relative_path = fileName.replace("./tv", "/tv")  # This gives 'tv/0/0821.json'
+            relative_path = fileName.replace("./tv", "tv")  # This gives 'tv/0/0821.json'
             github_url = f"https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/{relative_path}"
 
             # Create new JSON format
