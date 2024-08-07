@@ -31,6 +31,7 @@ jobs:
           git config --global user.name 'hl128k'
           git config --global user.email 'hl128k@qq.com'
           export TZ='Asia/Shanghai'
+          git pull
           git add .
           git commit -m "update" -a
       - name: 推送
