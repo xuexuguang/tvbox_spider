@@ -35,14 +35,20 @@ def main():
                 .replace('"https://github.com', '"' + reList[reI]) \
                 .replace("'https://raw.githubusercontent.com", "'" + reList[reI]) \
                 .replace('"https://raw.githubusercontent.com', '"' + reList[reI])
-            fp = open("./tv/" + str(reI) + "/" + urlName + ".json", "w+", encoding='utf-8')
+
+            fileName = "./tv/" + str(reI) + "/" + urlName + ".json"     
+            fp = open(fileName, "w+", encoding='utf-8')
             fp.write(reqText)
+
+            
+            relative_path = fileName.replace("./tv", "/tv")  # This gives 'tv/0/0821.json'
+            github_url = f"https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/{relative_path}"
 
             # Create new JSON format
             new_tvbox_data = {
                 "urls": [
                     {
-                        "url": reqText,
+                        "url": github_url,
                         "name": urlName
                     }
                 ]
