@@ -303,7 +303,7 @@ def write_readme(data):
 """
 
     # 将字符串写入文件
-    with open('readme.md', 'w+', encoding='utf-8') as fp:
+    with open('README.md', 'w+', encoding='utf-8') as fp:
         fp.write(readme_content)
     send_to_dingtalk(readme_content)
 
