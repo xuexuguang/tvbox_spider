@@ -120,7 +120,7 @@ def get_data(url):
             elapsed_time = end_time - start_time
             
             # 输出请求的状态码和耗时
-            print(f"url: {url}, 状态码: {urlReq.status_code},耗时: {elapsed_time:.2f} 秒.")
+            print(f"url: {url} , 状态码: {urlReq.status_code} , 耗时: {elapsed_time:.2f} 秒.")
                     
             # 返回请求的文本内容
             return urlReq.text
