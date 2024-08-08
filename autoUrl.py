@@ -76,7 +76,7 @@ def main():
     fp.write("本次执行完成时间为：" + now.strftime("%Y-%m-%d %H:%M:%S") + "\n\n")    
     fp.write("本次执行统计线路共计为：" + len(tvbox_data) + "条\n\n")
     if tvbox_count > 0:
-        fp.write("请配置订阅地址：" https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tvbox.json "\n\n")
+        fp.write("请配置订阅地址 https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tvbox.json \n\n")
     fp.write("当前内容来源详情请查看url.json\n\n")
     fp.write("如果感兴趣,请复制项目后自行研究使用\n\n")
     fp.close()
