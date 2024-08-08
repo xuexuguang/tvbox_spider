@@ -18,8 +18,11 @@ def main():
     reRawList = [False, False,
                  True, False,
                  False, True]
+
+    start_ts = datetime.datetime.now()
+    tvbox_data = []                  
     for item in urlJson:
-        urlData = get_json(item["url"])
+        urlData = get_json(item["url"])    
         for reI in range(len(reList)):
             urlName = item["name"]
             urlPath = item["path"]
@@ -39,24 +42,14 @@ def main():
             fileName = "./tv/" + str(reI) + "/" + urlName + ".json"     
             fp = open(fileName, "w+", encoding='utf-8')
             fp.write(reqText)
-
             
-            relative_path = fileName.replace("./tv", "tv")  # This gives 'tv/0/0821.json'
-            github_url = f"https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/{relative_path}"
-
-            # Create new JSON format
-            new_tvbox_data = {
-                "urls": [
-                    {
-                        "url": github_url,
-                        "name": urlName
-                    }
-                ]
-            }
-
-            # Write to tvbox.json
-            with open("./tvbox.json", "w+", encoding='utf-8') as fp1:
-                json.dump(new_tvbox_data, fp1, ensure_ascii=False, indent=2)    
+            relative_path = fileName.replace("./tv", "tv")
+            github_url = f"https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/{relative_path}"                
+            tvbox_data.append({"url": github_url,"name": urlName})
+         
+    #写入多仓的url
+    with open("./tvbox.json", "w+", encoding='utf-8') as fp1:
+        json.dump({"urls": tvbox_data}, fp1, ensure_ascii=False, indent=2)   
 
     now = datetime.datetime.now()
     fp = open('README.md', "w+", encoding='utf-8')
@@ -78,7 +71,8 @@ def main():
     fp.write("自用请勿宣传\n\n")
     fp.write("所有数据全部搜集于网络，不保证可用性\n\n")
     fp.write("因电视对GitHub访问问题，所以将配置中的GitHub换成镜像源\n\n")
-    fp.write("本次自动更新时间为：" + now.strftime("%Y-%m-%d %H:%M:%S") + "\n\n")
+    fp.write("本次开始时间为：" + start_ts.strftime("%Y-%m-%d %H:%M:%S") + "\n\n")
+    fp.write("本次执行完成时间为：" + now.strftime("%Y-%m-%d %H:%M:%S") + "\n\n")    
     fp.write("当前内容来源详情请查看url.json\n\n")
     fp.write("如果感兴趣,请复制项目后自行研究使用\n\n")
     fp.close()
