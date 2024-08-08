@@ -15,6 +15,8 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 MAX_WORKERS = 10
 # 请求url超时时间，超过该时间的url的线路将丢弃
 URL_TIMEOUT = 2
+# 请求异常，最大重试次数
+MAX_RETRIES = 1
 
 
 def main():
@@ -58,11 +60,14 @@ def main():
     # 多仓urls
     tvbox_urls = []
 
+    # 并行获取自定义的url，为了保证有序，这里线程调整为1
     with open('./tvbox_custom.json', 'r', encoding='utf-8') as f:
         tvboxCustomJson = json.load(f)
-    # 并行获取tvbox_custom URL
+
     with concurrent.futures.ThreadPoolExecutor(max_workers=1) as executor:
-        future_to_url = {executor.submit(fetch_url_data, item["url"]): item for item in tvboxCustomJson["urls"]}
+        future_to_url = {
+            executor.submit(fetch_url_data, item): item for item in tvboxCustomJson
+        }
 
         for future in concurrent.futures.as_completed(future_to_url):
             item = future_to_url[future]
@@ -72,20 +77,18 @@ def main():
                 continue
             tvbox_urls.append({"url": item["url"], "name": item["name"]})
 
-    # 读取 tvbox_spider.json 文件
+    # 并行获取爬虫的url
     with open('./tvbox_spider.json', 'r', encoding='utf-8') as f:
         tvboxSpiderJson = json.load(f)
 
-    # 并行获取 URL 数据
     with concurrent.futures.ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
-        future_to_url = {executor.submit(fetch_url_data, item["url"]): item for item in tvboxSpiderJson}
+        future_to_url = {
+            executor.submit(fetch_url_data, item): item for item in tvboxSpiderJson
+        }
 
         for future in concurrent.futures.as_completed(future_to_url):
             item = future_to_url[future]
             urlData = future.result()
-
-            if not urlData:
-                continue
 
             # 处理每个 speedItem
             for speedItem in speedList:
@@ -103,16 +106,29 @@ def main():
     write_readme(readme_data)
 
 
-def fetch_url_data(url):
-    """Fetch JSON data from a given URL."""
-    try:
-        return get_json(url)
-    except Exception as e:
-        print(f"<fetch_url_data> get_json {url} err: {e}")
-        return None
+def fetch_url_data(item):
+    """Fetch JSON data from a given URL with retries."""
+    url = item.get("url", "")
+    if not url:
+        return
+
+    max_retries = item.get("retry", MAX_RETRIES)
+    timeout = item.get("timeout", URL_TIMEOUT)
+    attempts = 0
+    while attempts < max_retries:
+        resp = get_json(url, timeout)
+        if not resp:
+            print(f"<fetch_url_data> get_json {url} is none , 重试 {attempts + 1} 次, 最大重试次数： {max_retries}")
+            attempts += 1
+        else:
+            return resp
+    return None
 
 
 def process_url_data(item, speedItem, urlData, tvbox_data):
+    if not item or not speedItem or not urlData:
+        return None
+
     """Process the URL data with a given speedItem."""
     urlName = item["name"]
     urlPath = item["path"]
@@ -145,10 +161,14 @@ def process_url_data(item, speedItem, urlData, tvbox_data):
 
 
 # 自定义函数，模拟从 URL 获取 JSON 数据
-def get_json(url):
+def get_json(url, timeout):
     key = url.split(";")[2] if ";" in url else ""
     url = url.split(";")[0] if ";" in url else url
-    data = get_data(url)
+    try:
+        data = get_data(url, timeout=timeout)
+    except Exception:
+        return ""
+
     if is_valid_json(data):
         return data
     if "**" in data:
@@ -167,7 +187,7 @@ def get_ext(ext):
         return ""
 
 
-def get_data(url):
+def get_data(url, timeout=URL_TIMEOUT):
     # 检查URL是否以http开头
     if url.startswith("http"):
         try:
@@ -175,7 +195,7 @@ def get_data(url):
             start_time = time.time()
 
             # 发送请求，并禁用SSL证书验证
-            urlReq = requests.get(url, verify=False, timeout=URL_TIMEOUT)
+            urlReq = requests.get(url, verify=False, timeout=timeout)
 
             # 记录请求结束时间
             end_time = time.time()
@@ -183,7 +203,7 @@ def get_data(url):
             # 计算请求耗时
             elapsed_time = end_time - start_time
 
-            if elapsed_time > URL_TIMEOUT or urlReq.status_code != 200:
+            if elapsed_time > URL_TIMEOUT or urlReq.status_code != 200 or not urlReq.text:
                 print(f"url: {url} , 状态码: {urlReq.status_code} , 耗时: {elapsed_time:.2f} 秒. 线路异常将丢弃该线路")
                 return ""
 
