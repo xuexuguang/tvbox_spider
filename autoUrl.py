@@ -72,7 +72,6 @@ def main():
         for future in concurrent.futures.as_completed(future_to_url):
             item = future_to_url[future]
             urlData = future.result()
-
             if not urlData:
                 continue
             tvbox_urls.append({"url": item["url"], "name": item["name"]})
@@ -109,7 +108,7 @@ def main():
 def fetch_url_data(item):
     """Fetch JSON data from a given URL with retries."""
     url = item.get("url", "")
-    if not url:
+    if url == "":
         return
 
     max_retries = item.get("retry", MAX_RETRIES)
