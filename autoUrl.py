@@ -45,12 +45,13 @@ def main():
             
             relative_path = fileName.replace("./tv", "tv")
             github_url = f"https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/{relative_path}"                
-            tvbox_data.append({"url": github_url,"name": urlName})
+            tvbox_data.append({"url": github_url,"name": relative_path.replace("/", "_")})
          
     #写入多仓的url
     with open("./tvbox.json", "w+", encoding='utf-8') as fp1:
         json.dump({"urls": tvbox_data}, fp1, ensure_ascii=False, indent=2)   
 
+    tvbox_count = len(tvbox_data)
     now = datetime.datetime.now()
     fp = open('README.md', "w+", encoding='utf-8')
     fp.write("# 提示\n\n")
@@ -73,6 +74,9 @@ def main():
     fp.write("因电视对GitHub访问问题，所以将配置中的GitHub换成镜像源\n\n")
     fp.write("本次开始时间为：" + start_ts.strftime("%Y-%m-%d %H:%M:%S") + "\n\n")
     fp.write("本次执行完成时间为：" + now.strftime("%Y-%m-%d %H:%M:%S") + "\n\n")    
+    fp.write("本次执行统计线路共计为：" + len(tvbox_data) + "条\n\n")
+    if tvbox_count > 0:
+        fp.write("请配置订阅地址：" https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tvbox.json "\n\n")
     fp.write("当前内容来源详情请查看url.json\n\n")
     fp.write("如果感兴趣,请复制项目后自行研究使用\n\n")
     fp.close()
@@ -99,9 +103,32 @@ def get_ext(ext):
         return ""
 
 def get_data(url):
+    # 检查URL是否以http开头
     if url.startswith("http"):
-        urlReq = requests.get(url, verify=False)
-        return urlReq.text
+        try:
+            # 记录请求开始时间
+            start_time = time.time()
+            
+            # 发送请求，并禁用SSL证书验证
+            urlReq = requests.get(url, verify=False)
+            
+            # 记录请求结束时间
+            end_time = time.time()
+            
+            # 计算请求耗时
+            elapsed_time = end_time - start_time
+            
+            # 输出请求的状态码和耗时
+            print(f"url: {url}, 状态码: {urlReq.status_code},耗时: {elapsed_time:.2f} 秒.")
+                    
+            # 返回请求的文本内容
+            return urlReq.text
+        except requests.exceptions.RequestException as e:
+            # 输出请求过程中发生的错误
+            print(f"url: {url}, err: {e}")
+            return ""
+    # 如果URL不是以http开头，则返回空字符串
+    print(f"{url} 无效, 跳过")
     return ""
 
 def ecb_decrypt(data, key):
