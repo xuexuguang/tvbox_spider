@@ -75,7 +75,7 @@ def main():
     fp.write("因电视对GitHub访问问题，所以将配置中的GitHub换成镜像源\n\n")
     fp.write("本次开始时间为：" + start_ts.strftime("%Y-%m-%d %H:%M:%S") + "\n\n")
     fp.write("本次执行完成时间为：" + now.strftime("%Y-%m-%d %H:%M:%S") + "\n\n")    
-    fp.write("本次执行统计线路共计为：" + len(tvbox_data) + "条\n\n")
+    fp.write("本次执行统计线路共计为：" + str(len(tvbox_data)) + "条\n\n")
     if tvbox_count > 0:
         fp.write("请配置订阅地址 https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tvbox.json \n\n")
     fp.write("当前内容来源详情请查看url.json\n\n")
