@@ -1,0 +1,16 @@
+{
+  "storeHouse": [
+    {
+      "sourceName": "💜TvBoxSpider🍭",
+      "sourceUrl": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tvbox.json"
+    },
+    {
+      "sourceName": "💚无邪优选仓🍭热门推荐🍭",
+      "sourceUrl": "https://www.gitlink.org.cn/api/wxrj/wx/raw/yx.txt?ref=master"
+    },
+    {
+      "sourceName": "💛无邪聚合仓🍭聚合全网🍭",
+      "sourceUrl": "https://www.gitlink.org.cn/api/wxrj/wx/raw/jh.txt?ref=master"
+    }
+  ]
+}
