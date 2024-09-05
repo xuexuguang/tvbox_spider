@@ -262,6 +262,9 @@ def write_readme(data):
 
     # 使用三重引号将多行文本定义为一个字符串
     readme_content = f"""
+    
+github加速地址：https://cdn.githubraw.com
+    
 本次开始时间为：{data["start_ts"].strftime("%Y-%m-%d %H:%M:%S")}
 
 本次执行完成时间为：{datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
@@ -269,7 +272,10 @@ def write_readme(data):
 本次执行统计线路共计为：{data["tvbox_count"]}条
 
 {"Tvbox多仓请配置订阅地址 https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tvbox.json" if data["tvbox_count"] > 0 else ""}
+
 {"影视仓软件请配置订阅地址 https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tvbox_ysc.json"}
+
+{"IPTV直播订阅地址 https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tvbox_ysc_iptv.json"}
 
 当前内容来源详情请查看tvbox_spider
 
