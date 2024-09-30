@@ -2,15 +2,15 @@
     
 github加速地址：https://cdn.githubraw.com
     
-本次开始时间为：2024-09-30 18:08:11
+本次开始时间为：2024-09-30 20:10:50
 
-本次执行完成时间为：2024-09-30 18:08:58
+本次执行完成时间为：2024-09-30 20:11:46
 
 本次执行统计线路共计为：175条
 
 Tvbox多仓请配置订阅地址 https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tvbox.json
 
-影视仓软件请配置订阅地址 https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tvbox_ysc.json
+影视仓软件请配置订阅地址 https://github.moeyy.xyz/https://github.com/xuexuguang/tvbox_spider/blob/main/tvbox_ysc.json
 
 IPTV直播订阅地址 https://gh.con.sh/https://raw.githubusercontent.com/yuanzl77/IPTV/main/live.m3u
 
