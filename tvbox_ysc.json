@@ -2,7 +2,7 @@
   "storeHouse": [
     {
       "sourceName": "💜TvBoxSpider🍭",
-      "sourceUrl": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tvbox.json"
+      "sourceUrl": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tvbox.json"
     },
     {
       "sourceName": "💚无邪优选仓🍭热门推荐🍭",
