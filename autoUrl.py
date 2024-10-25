@@ -260,6 +260,10 @@ def is_valid_json(json_str):
 def write_readme(data):
     """Write readme content to a file."""
 
+    #刷新下cdn
+    refresh_cdn_url = "https://purge.jsdelivr.net/gh/xuexuguang/tvbox_spider/tvbox.json"
+    get_json(refresh_cdn_url, 3)
+
     # 使用三重引号将多行文本定义为一个字符串
     readme_content = f"""
 本次开始时间为：{data["start_ts"].strftime("%Y-%m-%d %H:%M:%S")}
