@@ -2,8 +2,6 @@
   {
     "url": "http://meowtv.cn/tv",
     "name": "🙀喵影线路",
-    "retry": 2,
-    "timeout": 2
   },
   {
     "url": "https://盒子迷.top/禁止贩卖",
@@ -12,6 +10,26 @@
   {
     "url": "https://ghproxy.net/https://raw.githubusercontent.com/PizazzGY/TVBox/main/api.json",
     "name": "🚀潇洒哥线路"
+  },
+  {
+    "url": "https://cdn.jsdelivr.net/gh/2hacc/TVBox@main/tvbox.json",
+    "name": "🚀2hacc"
+  },
+  {
+    "url": "http://www.mpanso.com/小米/DEMO.json",
+    "name": "🚀小米线路"
+  },
+  {
+    "url": "https://gh.llkk.cc/https://raw.githubusercontent.com/PizazzGY/TVBox/main/api.json",
+    "name": "🚀潇洒哥弹幕线路"
+  },
+  {
+    "url": "https://毒盒.com/tv",
+    "name": "公众号【毒盒影视】"
+  },
+  {
+    "url": "https://download.kstore.space/download/2883/nzk/nzk0722.json",
+    "name": "D佬魔改线路"
   },
   {
     "url": "http://pandown.pro/tvbox/tvbox.json",
