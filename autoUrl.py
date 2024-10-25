@@ -262,9 +262,6 @@ def write_readme(data):
 
     # 使用三重引号将多行文本定义为一个字符串
     readme_content = f"""
-    
-github加速地址：https://cdn.githubraw.com
-    
 本次开始时间为：{data["start_ts"].strftime("%Y-%m-%d %H:%M:%S")}
 
 本次执行完成时间为：{datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
