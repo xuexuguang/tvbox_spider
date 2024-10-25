@@ -268,7 +268,7 @@ def write_readme(data):
 
 本次执行统计线路共计为：{data["tvbox_count"]}条
 
-{"Tvbox多仓请配置订阅地址 https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tvbox.json" if data["tvbox_count"] > 0 else ""}
+{"Tvbox多仓请配置订阅地址 https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider/tvbox.json" if data["tvbox_count"] > 0 else ""}
 
 {"IPTV直播订阅地址 https://gh.con.sh/https://raw.githubusercontent.com/yuanzl77/IPTV/main/live.m3u"}
 
