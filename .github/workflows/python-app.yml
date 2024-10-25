@@ -3,7 +3,7 @@ on:
   push:
   schedule:
     - cron: '0 21 * * *'
-  workflow_dispatch:
+  workflow_dispatch:  # 添加这一行
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -28,21 +28,10 @@ jobs:
           pip install requests
           pip install urllib3
           pip install pycryptodome
-
       - name: 生成json文件
         run: |
           export TZ='Asia/Shanghai'
           python autoUrl.py
-
-      - name: 生成版本号
-        id: version
-        run: |
-          # 获取最新Tag并递增
-          TAG=$(git describe --tags --abbrev=0 || echo "v0.0.0")
-          VERSION=$(echo $TAG | awk -F. -v OFS=. '{$NF += 1 ; print}')
-          echo "VERSION=$VERSION" >> $GITHUB_ENV
-          echo "Generated version: $VERSION"
-
       - name: 暂存提交
         run: |
           git config --global user.name 'hl128k'
@@ -50,14 +39,8 @@ jobs:
           export TZ='Asia/Shanghai'
           git pull
           git add .
-          git commit -m "update - version ${{ env.VERSION }}" -a
-
+          git commit -m "update" -a
       - name: 推送
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: 创建版本Tag
-        run: |
-          git tag -a ${{ env.VERSION }} -m "Release version ${{ env.VERSION }}"
-          git push origin ${{ env.VERSION }}
