@@ -1,11 +1,11 @@
 
-本次开始时间为：2024-10-30 05:20:32
+本次开始时间为：2024-10-30 11:11:56
 
-本次执行完成时间为：2024-10-30 05:21:31
+本次执行完成时间为：2024-10-30 11:13:00
 
-本次执行统计线路共计为：204条
+本次执行统计线路共计为：199条
 
-Tvbox多仓请配置订阅地址 https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider/tvbox.json
+Tvbox多仓请配置订阅地址 https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tvbox.json
 
 IPTV直播订阅地址 https://gh.con.sh/https://raw.githubusercontent.com/yuanzl77/IPTV/main/live.m3u
 
