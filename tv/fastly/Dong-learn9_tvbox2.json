@@ -100,6 +100,16 @@
             "ext": "https://fastly.jsdelivr.net/gh/Dong-learn9/TVBox-zyjk@main/JS/js/毒蛇电影.js"
         },
         {
+            "key": "drpy_js_BT",
+            "name": "BT┃JS",
+            "type": 3,
+            "api": "https://git.acwing.com/iduoduo/orange/-@main/drpy_libs/drpy2.min.js",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 1,
+            "ext": "https://fastly.jsdelivr.net/gh/Dong-learn9/TVBox-zyjk@main/JS/js/BT影视.js"
+        },
+        {
             "key": "hipy_js_多多追剧[优]",
             "name": "多多┃追剧",
             "type": 3,
