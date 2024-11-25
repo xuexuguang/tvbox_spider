@@ -667,8 +667,8 @@
             "api": "csp_Market",
             "searchable": 0,
             "changeable": 0,
-            "jar": "pg.jar",
-            "ext": "https://www.fish2018.us.kg/p/pg.jar"
+            "jar": "https://www.fish2018.us.kg/p/pg.jar",
+            "ext": "https://fm.t4tv.hz.cz/json/market.json"
         },
         {
             "key": "push_agent",
