@@ -5,10 +5,10 @@
         {
             "name": "DD",
             "type": 0,
-            "url": "https://ghp.ci/raw.githubusercontent.com/Dong-learn9/AutoTV/master/output/tv.txt",
+            "url": "https://cf.ghproxy.cc/https://raw.githubusercontent.com/Dong-learn9/AutoTV/master/output/result.txt",
             "playerType": 1,
             "epg": "https://epg.v1.mk/json?ch={name}&date={date}",
-            "logo": "https://live.fanmingming.com/tv/{name}.png"
+            "logo": "https://gitlab.com/fanmingming/live/-/main/tv/{name}.png"
         },
         {
             "name": "YM",
@@ -29,7 +29,7 @@
         {
             "name": "LF",
             "type": 0,
-            "url": "https://ghp.ci/https://raw.githubusercontent.com/lalifeier/IPTV/main/txt/IPTV.txt",
+            "url": "https://cf.ghproxy.cc/https://raw.githubusercontent.com/lalifeier/IPTV/main/txt/IPTV.txt",
             "playerType": 1,
             "epg": "https://epg.112114.eu.org/?ch={name}&date={date}",
             "logo": "https://live.fanmingming.com/tv/{name}.png"
@@ -257,15 +257,15 @@
         },
         {
             "key": "Bt0",
-            "name": "不太灵|磁力",
+            "name": "不太灵┃磁力",
             "type": 3,
             "api": "csp_Bt0",
             "quickSearch": 1,
             "changeable": 1,
             "filterable": 1,
             "timeout": 60,
-            "jar": "https://www.fish2018.us.kg/p/pg.jar",
-            "ext": "https://www.fish2018.us.kg/p/lib/tokenm.json$$$null$$$noproxy$$$1",
+            "jar": "http://www.fish2018.us.kg/p/pg.jar",
+            "ext": "http://www.fish2018.us.kg/p/lib/tokenm.json$$$null$$$noproxy$$$1",
             "style": {
                 "type": "list",
                 "ratio": 1.1
@@ -273,7 +273,7 @@
         },
         {
             "key": "csp_XBPQ_金牌",
-            "name": "金牌| BPQ",
+            "name": "金牌┃BPQ",
             "type": 3,
             "api": "csp_XBPQ",
             "searchable": 1,
@@ -340,7 +340,7 @@
 
         {
             "key": "csp_XBPQ_天堂",
-            "name": "天堂| BPQ",
+            "name": "天堂|┃BPQ",
             "type": 3,
             "api": "csp_XBPQ",
             "searchable": 1,
@@ -419,14 +419,14 @@
 
         {
             "key": "新6V",
-            "name": "新6V|网盘",
+            "name": "新6V┃网盘",
             "type": 3,
             "api": "csp_Xb6v",
             "searchable": 1,
             "changeable": 1,
             "timeout": 60,
-            "jar": "https://www.fish2018.us.kg/p/pg.jar",
-            "ext": "https://www.fish2018.us.kg/p/lib/tokenm.json$$$https://www.66ss.org$$$null$$$1"
+            "jar": "http://www.fish2018.us.kg/p/pg.jar",
+            "ext": "http://www.fish2018.us.kg/p/lib/tokenm.json$$$https://www.66ss.org$$$null$$$1"
         },
         {
             "key": "电影港",
@@ -573,7 +573,7 @@
         },
         {
             "key": "csp_XBPQ_动漫",
-            "name": "动漫|XBPQ",
+            "name": "动漫┃XBPQ",
             "type": 3,
             "api": "csp_XBPQ",
             "searchable": 1,
@@ -640,7 +640,7 @@
             "searchable": 1,
             "quickSearch": 1,
             "changeable": 0,
-            "jar": "https://www.fish2018.us.kg/p/pg.jar",
+            "jar": "http://www.fish2018.us.kg/p/pg.jar",
             "ext": {
                 "aliToken": "tvbox/token.txt",
                 "from": "4k|auto|fhd"
@@ -648,12 +648,12 @@
         },
         {
             "key": "网盘配置",
-            "name": "网盘及彈幕配置",
+            "name": "网盘┃彈幕",
             "type": 3,
             "api": "csp_Config",
             "searchable": 0,
             "changeable": 0,
-            "jar": "https://www.fish2018.us.kg/p/pg.jar",
+            "jar": "http://www.fish2018.us.kg/p/pg.jar",
             "ext": "https://github.moeyy.xyz/https://raw.githubusercontent.com/Dong-learn9/TVBox-zyjk/main/lib/tokenm.json",
             "style": {
                 "type": "rect",
@@ -662,13 +662,13 @@
         },
         {
             "key": "應用商店",
-            "name": "应用商店",
+            "name": "应用┃商店",
             "type": 3,
             "api": "csp_Market",
             "searchable": 0,
             "changeable": 0,
-            "jar": "https://www.fish2018.us.kg/p/pg.jar",
-            "ext": "https://fm.t4tv.hz.cz/json/market.json"
+            "jar": "http://www.fish2018.us.kg/p/pg.jar",
+            "ext": "http://fm.t4tv.hz.cz/json/market.json"
         },
         {
             "key": "push_agent",
