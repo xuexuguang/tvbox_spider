@@ -1,0 +1,16 @@
+{
+  "urls": [
+    {
+      "url": "https://ghproxy.cc/https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.m3u",
+      "name": "Guovin"
+    },
+    {
+      "url": "https://gh-proxy.com/raw.githubusercontent.com/fanmingming/live/refs/heads/main/tv/m3u/ipv6.m3u",
+      "name": "fanmingming"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
+      "name": "aptv"
+    }
+  ]
+}

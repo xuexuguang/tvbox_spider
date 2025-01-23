@@ -274,7 +274,7 @@ def write_readme(data):
 
 {"Tvbox多仓请配置订阅地址 https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tvbox.json" if data["tvbox_count"] > 0 else ""}
 
-{"IPTV直播订阅地址 https://gh.con.sh/https://raw.githubusercontent.com/yuanzl77/IPTV/main/live.m3u"}
+{"IPTV直播订阅地址 https://ghproxy.cc/https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.m3u"}
 
 当前内容来源详情请查看tvbox_spider
 
