@@ -9,6 +9,10 @@
       "name": "🚀小米线路"
     },
     {
+      "url": "https://gh.llkk.cc/https://raw.githubusercontent.com/PizazzGY/TVBox/main/api.json",
+      "name": "🚀潇洒哥弹幕线路"
+    },
+    {
       "url": "http://pandown.pro/tvbox/tvbox.json",
       "name": "🚀巧技"
     },
@@ -71,6 +75,10 @@
     {
       "url": "https://龙伊.top",
       "name": "💎无邪┃龙伊线路"
+    },
+    {
+      "url": "https://notabug.org/qizhen15800/My9394/raw/master/%e4%b8%8d%e8%89%af%e5%b8%85.json",
+      "name": "💎无邪┃不良帅线路"
     },
     {
       "url": "http://cdn.qiaoji8.com/tvbox.json",
@@ -137,6 +145,10 @@
       "name": "🙀盒子18线路"
     },
     {
+      "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/coderzcr/Awesome-TvBox-Sources/main/tv.json",
+      "name": "💖爱TV吧"
+    },
+    {
       "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/coderzcr/Awesome-TvBox-Sources/main/tv4k.json",
       "name": "💖纯4K"
     },
@@ -169,6 +181,30 @@
       "name": "🚀大全线路1"
     },
     {
+      "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/ghproxy/heroaku_pyn.json",
+      "name": "tv_ghproxy_heroaku_pyn.json"
+    },
+    {
+      "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/kk/heroaku_pyn.json",
+      "name": "tv_kk_heroaku_pyn.json"
+    },
+    {
+      "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/jsdelivr/heroaku_pyn.json",
+      "name": "tv_jsdelivr_heroaku_pyn.json"
+    },
+    {
+      "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/ghproxy/heroaku_pyn.json",
+      "name": "tv_ghproxy_heroaku_pyn.json"
+    },
+    {
+      "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/moeyy/heroaku_pyn.json",
+      "name": "tv_moeyy_heroaku_pyn.json"
+    },
+    {
+      "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/fastly/heroaku_pyn.json",
+      "name": "tv_fastly_heroaku_pyn.json"
+    },
+    {
       "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/ghproxy/gaotianliuyun_0827.json",
       "name": "tv_ghproxy_gaotianliuyun_0827.json"
     },
@@ -191,6 +227,30 @@
     {
       "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/fastly/gaotianliuyun_0827.json",
       "name": "tv_fastly_gaotianliuyun_0827.json"
+    },
+    {
+      "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/ghproxy/gaotianliuyun_0707.json",
+      "name": "tv_ghproxy_gaotianliuyun_0707.json"
+    },
+    {
+      "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/kk/gaotianliuyun_0707.json",
+      "name": "tv_kk_gaotianliuyun_0707.json"
+    },
+    {
+      "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/jsdelivr/gaotianliuyun_0707.json",
+      "name": "tv_jsdelivr_gaotianliuyun_0707.json"
+    },
+    {
+      "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/ghproxy/gaotianliuyun_0707.json",
+      "name": "tv_ghproxy_gaotianliuyun_0707.json"
+    },
+    {
+      "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/moeyy/gaotianliuyun_0707.json",
+      "name": "tv_moeyy_gaotianliuyun_0707.json"
+    },
+    {
+      "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/fastly/gaotianliuyun_0707.json",
+      "name": "tv_fastly_gaotianliuyun_0707.json"
     },
     {
       "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/ghproxy/gaotianliuyun_0821.json",
@@ -241,30 +301,6 @@
       "name": "tv_fastly_0821.json"
     },
     {
-      "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/ghproxy/gaotianliuyun_0826.json",
-      "name": "tv_ghproxy_gaotianliuyun_0826.json"
-    },
-    {
-      "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/kk/gaotianliuyun_0826.json",
-      "name": "tv_kk_gaotianliuyun_0826.json"
-    },
-    {
-      "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/jsdelivr/gaotianliuyun_0826.json",
-      "name": "tv_jsdelivr_gaotianliuyun_0826.json"
-    },
-    {
-      "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/ghproxy/gaotianliuyun_0826.json",
-      "name": "tv_ghproxy_gaotianliuyun_0826.json"
-    },
-    {
-      "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/moeyy/gaotianliuyun_0826.json",
-      "name": "tv_moeyy_gaotianliuyun_0826.json"
-    },
-    {
-      "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/fastly/gaotianliuyun_0826.json",
-      "name": "tv_fastly_gaotianliuyun_0826.json"
-    },
-    {
       "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/ghproxy/gaotianliuyun_0825.json",
       "name": "tv_ghproxy_gaotianliuyun_0825.json"
     },
@@ -289,52 +325,52 @@
       "name": "tv_fastly_gaotianliuyun_0825.json"
     },
     {
-      "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/ghproxy/heroaku_pyn.json",
-      "name": "tv_ghproxy_heroaku_pyn.json"
+      "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/ghproxy/gaotianliuyun_0826.json",
+      "name": "tv_ghproxy_gaotianliuyun_0826.json"
     },
     {
-      "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/kk/heroaku_pyn.json",
-      "name": "tv_kk_heroaku_pyn.json"
+      "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/kk/gaotianliuyun_0826.json",
+      "name": "tv_kk_gaotianliuyun_0826.json"
     },
     {
-      "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/jsdelivr/heroaku_pyn.json",
-      "name": "tv_jsdelivr_heroaku_pyn.json"
+      "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/jsdelivr/gaotianliuyun_0826.json",
+      "name": "tv_jsdelivr_gaotianliuyun_0826.json"
     },
     {
-      "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/ghproxy/heroaku_pyn.json",
-      "name": "tv_ghproxy_heroaku_pyn.json"
+      "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/ghproxy/gaotianliuyun_0826.json",
+      "name": "tv_ghproxy_gaotianliuyun_0826.json"
     },
     {
-      "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/moeyy/heroaku_pyn.json",
-      "name": "tv_moeyy_heroaku_pyn.json"
+      "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/moeyy/gaotianliuyun_0826.json",
+      "name": "tv_moeyy_gaotianliuyun_0826.json"
     },
     {
-      "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/fastly/heroaku_pyn.json",
-      "name": "tv_fastly_heroaku_pyn.json"
+      "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/fastly/gaotianliuyun_0826.json",
+      "name": "tv_fastly_gaotianliuyun_0826.json"
     },
     {
-      "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/ghproxy/gaotianliuyun_0707.json",
-      "name": "tv_ghproxy_gaotianliuyun_0707.json"
+      "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/ghproxy/heroaku_ptest.json",
+      "name": "tv_ghproxy_heroaku_ptest.json"
     },
     {
-      "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/kk/gaotianliuyun_0707.json",
-      "name": "tv_kk_gaotianliuyun_0707.json"
+      "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/kk/heroaku_ptest.json",
+      "name": "tv_kk_heroaku_ptest.json"
     },
     {
-      "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/jsdelivr/gaotianliuyun_0707.json",
-      "name": "tv_jsdelivr_gaotianliuyun_0707.json"
+      "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/jsdelivr/heroaku_ptest.json",
+      "name": "tv_jsdelivr_heroaku_ptest.json"
     },
     {
-      "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/ghproxy/gaotianliuyun_0707.json",
-      "name": "tv_ghproxy_gaotianliuyun_0707.json"
+      "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/ghproxy/heroaku_ptest.json",
+      "name": "tv_ghproxy_heroaku_ptest.json"
     },
     {
-      "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/moeyy/gaotianliuyun_0707.json",
-      "name": "tv_moeyy_gaotianliuyun_0707.json"
+      "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/moeyy/heroaku_ptest.json",
+      "name": "tv_moeyy_heroaku_ptest.json"
     },
     {
-      "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/fastly/gaotianliuyun_0707.json",
-      "name": "tv_fastly_gaotianliuyun_0707.json"
+      "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/fastly/heroaku_ptest.json",
+      "name": "tv_fastly_heroaku_ptest.json"
     },
     {
       "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/ghproxy/heroaku_dtes.json",
@@ -383,30 +419,6 @@
     {
       "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/fastly/heroaku_ayn.json",
       "name": "tv_fastly_heroaku_ayn.json"
-    },
-    {
-      "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/ghproxy/heroaku_ptest.json",
-      "name": "tv_ghproxy_heroaku_ptest.json"
-    },
-    {
-      "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/kk/heroaku_ptest.json",
-      "name": "tv_kk_heroaku_ptest.json"
-    },
-    {
-      "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/jsdelivr/heroaku_ptest.json",
-      "name": "tv_jsdelivr_heroaku_ptest.json"
-    },
-    {
-      "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/ghproxy/heroaku_ptest.json",
-      "name": "tv_ghproxy_heroaku_ptest.json"
-    },
-    {
-      "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/moeyy/heroaku_ptest.json",
-      "name": "tv_moeyy_heroaku_ptest.json"
-    },
-    {
-      "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/fastly/heroaku_ptest.json",
-      "name": "tv_fastly_heroaku_ptest.json"
     },
     {
       "url": "https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/tv/ghproxy/0825.json",
