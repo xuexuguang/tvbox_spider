@@ -1,0 +1,45 @@
+name: Refresh jsDelivr
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/refresh-jsdelivr.yml"
+      - "tvbox.json"
+      - "tv/**/*.json"
+
+permissions:
+  contents: read
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Purge jsDelivr cache
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          mapfile -t files < <(
+            {
+              printf '%s\n' "tvbox.json"
+              find tv -type f -name '*.json' | sort
+            } | awk '!seen[$0]++'
+          )
+
+          for file in "${files[@]}"; do
+            purge_url="https://purge.jsdelivr.net/gh/${GITHUB_REPOSITORY}@${GITHUB_REF_NAME}/${file}"
+            echo "Purging ${purge_url}"
+            curl -fsSL --retry 3 --retry-delay 2 "${purge_url}" >/dev/null || {
+              echo "::warning title=jsDelivr purge failed::${file}"
+            }
+          done
+
+          # Warm the main subscription URL after purge so edge nodes fetch the new GitHub content.
+          curl -fsSL --retry 3 --retry-delay 2 \
+            "https://fastly.jsdelivr.net/gh/${GITHUB_REPOSITORY}@${GITHUB_REF_NAME}/tvbox.json" \
+            >/dev/null

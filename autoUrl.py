@@ -17,8 +17,6 @@ MAX_WORKERS = 10
 URL_TIMEOUT = 1
 # 请求异常，最大重试次数
 MAX_RETRIES = 1
-# CDN 刷新请求超时时间
-CDN_REFRESH_TIMEOUT = 10
 # 仓库 CDN 配置
 GITHUB_REPO = "xuexuguang/tvbox_spider"
 GITHUB_BRANCH = "main"
@@ -65,7 +63,6 @@ def main():
 
     # 多仓urls
     tvbox_urls = []
-    cdn_paths = ["tvbox.json"]
 
     # 并行获取自定义的url，为了保证有序，这里线程调整为1
     with open('./tvbox_custom.json', 'r', encoding='utf-8') as f:
@@ -98,13 +95,11 @@ def main():
 
             # 处理每个 speedItem
             for speedItem in speedList:
-                process_url_data(item, speedItem, urlData, tvbox_urls, cdn_paths)
+                process_url_data(item, speedItem, urlData, tvbox_urls)
 
     # 写入多仓的 URL，覆盖写
     with open("./tvbox.json", "w+", encoding='utf-8') as fp1:
         json.dump({"urls": tvbox_urls}, fp1, ensure_ascii=False, indent=2)
-
-    refresh_cdn_cache(cdn_paths)
 
     # 写入 readme
     readme_data = {
@@ -133,7 +128,7 @@ def fetch_url_data(item):
     return None
 
 
-def process_url_data(item, speedItem, urlData, tvbox_data, cdn_paths=None):
+def process_url_data(item, speedItem, urlData, tvbox_data):
     if not item or not speedItem or not urlData:
         return None
 
@@ -164,8 +159,6 @@ def process_url_data(item, speedItem, urlData, tvbox_data, cdn_paths=None):
         fp.write(reqText)
 
     relative_path = fileName.replace("./tv", "tv")
-    if cdn_paths is not None:
-        cdn_paths.append(relative_path)
     cdn_url = build_jsdelivr_url(relative_path)
     add_tvbox_url(tvbox_data, cdn_url, relative_path.replace("/", "_"))
 
@@ -185,42 +178,6 @@ def is_url_available(url, timeout=URL_TIMEOUT):
 def build_jsdelivr_url(path, host=JSDELIVR_HOST):
     path = path.lstrip("/")
     return f"https://{host}/gh/{GITHUB_REPO}@{GITHUB_BRANCH}/{path}"
-
-
-def build_jsdelivr_purge_url(path):
-    return build_jsdelivr_url(path, host="purge.jsdelivr.net")
-
-
-def refresh_cdn_cache(paths):
-    unique_paths = sorted(set(paths))
-    if not unique_paths:
-        return
-
-    print(f"<refresh_cdn_cache> 开始刷新 jsDelivr CDN，共 {len(unique_paths)} 个文件")
-    max_workers = min(MAX_WORKERS, len(unique_paths))
-    with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
-        future_to_path = {
-            executor.submit(refresh_cdn_path, path): path for path in unique_paths
-        }
-        for future in concurrent.futures.as_completed(future_to_path):
-            path = future_to_path[future]
-            try:
-                if future.result():
-                    print(f"<refresh_cdn_cache> {path} 刷新完成")
-                else:
-                    print(f"<refresh_cdn_cache> {path} 刷新失败")
-            except Exception as e:
-                print(f"<refresh_cdn_cache> {path} 刷新异常: {e}")
-
-
-def refresh_cdn_path(path):
-    purge_url = build_jsdelivr_purge_url(path)
-    if not get_data(purge_url, timeout=CDN_REFRESH_TIMEOUT):
-        return False
-
-    # purge 后主动访问一次 CDN，尽量让边缘节点尽快回源。
-    cdn_url = build_jsdelivr_url(path)
-    return bool(get_data(cdn_url, timeout=CDN_REFRESH_TIMEOUT))
 
 
 # 自定义函数，模拟从 URL 获取 JSON 数据
