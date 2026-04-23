@@ -14,9 +14,15 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 # 最大并发数
 MAX_WORKERS = 10
 # 请求url超时时间，超过该时间的url的线路将丢弃
-URL_TIMEOUT = 2
+URL_TIMEOUT = 1
 # 请求异常，最大重试次数
 MAX_RETRIES = 1
+# CDN 刷新请求超时时间
+CDN_REFRESH_TIMEOUT = 10
+# 仓库 CDN 配置
+GITHUB_REPO = "xuexuguang/tvbox_spider"
+GITHUB_BRANCH = "main"
+JSDELIVR_HOST = "fastly.jsdelivr.net"
 
 
 def main():
@@ -59,6 +65,7 @@ def main():
 
     # 多仓urls
     tvbox_urls = []
+    cdn_paths = ["tvbox.json"]
 
     # 并行获取自定义的url，为了保证有序，这里线程调整为1
     with open('./tvbox_custom.json', 'r', encoding='utf-8') as f:
@@ -74,7 +81,7 @@ def main():
             urlData = future.result()
             if not urlData:
                 continue
-            tvbox_urls.append({"url": item["url"], "name": item["name"]})
+            add_tvbox_url(tvbox_urls, item["url"], item["name"])
 
     # 并行获取爬虫的url
     with open('./tvbox_spider.json', 'r', encoding='utf-8') as f:
@@ -91,11 +98,13 @@ def main():
 
             # 处理每个 speedItem
             for speedItem in speedList:
-                process_url_data(item, speedItem, urlData, tvbox_urls)
+                process_url_data(item, speedItem, urlData, tvbox_urls, cdn_paths)
 
     # 写入多仓的 URL，覆盖写
     with open("./tvbox.json", "w+", encoding='utf-8') as fp1:
         json.dump({"urls": tvbox_urls}, fp1, ensure_ascii=False, indent=2)
+
+    refresh_cdn_cache(cdn_paths)
 
     # 写入 readme
     readme_data = {
@@ -112,7 +121,7 @@ def fetch_url_data(item):
         return
 
     max_retries = item.get("retry", MAX_RETRIES)
-    timeout = item.get("timeout", URL_TIMEOUT)
+    timeout = URL_TIMEOUT
     attempts = 0
     while attempts < max_retries:
         resp = get_json(url, timeout)
@@ -124,7 +133,7 @@ def fetch_url_data(item):
     return None
 
 
-def process_url_data(item, speedItem, urlData, tvbox_data):
+def process_url_data(item, speedItem, urlData, tvbox_data, cdn_paths=None):
     if not item or not speedItem or not urlData:
         return None
 
@@ -155,8 +164,63 @@ def process_url_data(item, speedItem, urlData, tvbox_data):
         fp.write(reqText)
 
     relative_path = fileName.replace("./tv", "tv")
-    github_url = f"https://cdn.githubraw.com/xuexuguang/tvbox_spider/main/{relative_path}"
-    tvbox_data.append({"url": github_url, "name": relative_path.replace("/", "_")})
+    if cdn_paths is not None:
+        cdn_paths.append(relative_path)
+    cdn_url = build_jsdelivr_url(relative_path)
+    add_tvbox_url(tvbox_data, cdn_url, relative_path.replace("/", "_"))
+
+
+def add_tvbox_url(tvbox_data, url, name):
+    """Add a URL only when the final subscription endpoint is fast and valid."""
+    if is_url_available(url, URL_TIMEOUT):
+        tvbox_data.append({"url": url, "name": name})
+    else:
+        print(f"<add_tvbox_url> {name} 最终线路异常或超过 {URL_TIMEOUT * 1000:.0f}ms，已从 tvbox.json 移除")
+
+
+def is_url_available(url, timeout=URL_TIMEOUT):
+    return bool(get_data(url, timeout=timeout))
+
+
+def build_jsdelivr_url(path, host=JSDELIVR_HOST):
+    path = path.lstrip("/")
+    return f"https://{host}/gh/{GITHUB_REPO}@{GITHUB_BRANCH}/{path}"
+
+
+def build_jsdelivr_purge_url(path):
+    return build_jsdelivr_url(path, host="purge.jsdelivr.net")
+
+
+def refresh_cdn_cache(paths):
+    unique_paths = sorted(set(paths))
+    if not unique_paths:
+        return
+
+    print(f"<refresh_cdn_cache> 开始刷新 jsDelivr CDN，共 {len(unique_paths)} 个文件")
+    max_workers = min(MAX_WORKERS, len(unique_paths))
+    with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
+        future_to_path = {
+            executor.submit(refresh_cdn_path, path): path for path in unique_paths
+        }
+        for future in concurrent.futures.as_completed(future_to_path):
+            path = future_to_path[future]
+            try:
+                if future.result():
+                    print(f"<refresh_cdn_cache> {path} 刷新完成")
+                else:
+                    print(f"<refresh_cdn_cache> {path} 刷新失败")
+            except Exception as e:
+                print(f"<refresh_cdn_cache> {path} 刷新异常: {e}")
+
+
+def refresh_cdn_path(path):
+    purge_url = build_jsdelivr_purge_url(path)
+    if not get_data(purge_url, timeout=CDN_REFRESH_TIMEOUT):
+        return False
+
+    # purge 后主动访问一次 CDN，尽量让边缘节点尽快回源。
+    cdn_url = build_jsdelivr_url(path)
+    return bool(get_data(cdn_url, timeout=CDN_REFRESH_TIMEOUT))
 
 
 # 自定义函数，模拟从 URL 获取 JSON 数据
@@ -165,18 +229,20 @@ def get_json(url, timeout):
     url = url.split(";")[0] if ";" in url else url
     try:
         data = get_data(url, timeout=timeout)
-    except Exception:
-        return ""
-
-    if is_valid_json(data):
+        if not data:
+            return ""
+        if is_valid_json(data):
+            return data
+        if "**" in data:
+            data = base64_decode(data)
+        if data.startswith("2423"):
+            data = cbc_decrypt(data)
+        if key:
+            data = ecb_decrypt(data, key)
         return data
-    if "**" in data:
-        data = base64_decode(data)
-    if data.startswith("2423"):
-        data = cbc_decrypt(data)
-    if key:
-        data = ecb_decrypt(data, key)
-    return data
+    except Exception as e:
+        print(f"<get_json> url: {url}, decode err: {e}")
+        return ""
 
 
 def get_ext(ext):
@@ -191,29 +257,35 @@ def get_data(url, timeout=URL_TIMEOUT):
     if url.startswith("http"):
         try:
             # 记录请求开始时间
-            start_time = time.time()
+            start_time = time.monotonic()
 
             # 发送请求，并禁用SSL证书验证
             urlReq = requests.get(url, verify=False, timeout=timeout)
 
             # 记录请求结束时间
-            end_time = time.time()
+            end_time = time.monotonic()
 
             # 计算请求耗时
             elapsed_time = end_time - start_time
 
-            if elapsed_time > URL_TIMEOUT or urlReq.status_code != 200 or not urlReq.text:
-                print(f"url: {url} , 状态码: {urlReq.status_code} , 耗时: {elapsed_time:.2f} 秒. 线路异常将丢弃该线路")
+            if elapsed_time > timeout:
+                print(f"url: {url} , 状态码: {urlReq.status_code} , 耗时: {elapsed_time:.3f} 秒. 超过 {timeout * 1000:.0f}ms，线路将丢弃")
+                return ""
+            if urlReq.status_code != 200:
+                print(f"url: {url} , 状态码: {urlReq.status_code} , 耗时: {elapsed_time:.3f} 秒. 状态码异常，线路将丢弃")
+                return ""
+            if not urlReq.text:
+                print(f"url: {url} , 状态码: {urlReq.status_code} , 耗时: {elapsed_time:.3f} 秒. 响应为空，线路将丢弃")
                 return ""
 
             # 输出请求的状态码和耗时
-            print(f"url: {url} , 状态码: {urlReq.status_code} , 耗时: {elapsed_time:.2f} 秒.")
+            print(f"url: {url} , 状态码: {urlReq.status_code} , 耗时: {elapsed_time:.3f} 秒.")
 
             # 返回请求的文本内容
             return urlReq.text
         except requests.exceptions.RequestException as e:
             # 输出请求过程中发生的错误
-            print(f"url: {url}, err: {e}")
+            print(f"url: {url}, 请求异常: {e}")
             return ""
     # 如果URL不是以http开头，则返回空字符串
     print(f"{url} 无效, 跳过")
@@ -260,10 +332,6 @@ def is_valid_json(json_str):
 def write_readme(data):
     """Write readme content to a file."""
 
-    #刷新下cdn
-    refresh_cdn_url = "https://purge.jsdelivr.net/gh/xuexuguang/tvbox_spider/tvbox.json"
-    get_json(refresh_cdn_url, 3)
-
     # 使用三重引号将多行文本定义为一个字符串
     readme_content = f"""
 本次开始时间为：{data["start_ts"].strftime("%Y-%m-%d %H:%M:%S")}
@@ -272,7 +340,7 @@ def write_readme(data):
 
 本次执行统计线路共计为：{data["tvbox_count"]}条
 
-{"Tvbox多仓请配置订阅地址 https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tvbox.json" if data["tvbox_count"] > 0 else ""}
+{"Tvbox多仓请配置订阅地址 " + build_jsdelivr_url("tvbox.json") if data["tvbox_count"] > 0 else ""}
 
 {"IPTV直播订阅地址 https://ghproxy.cc/https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.m3u"}
 
