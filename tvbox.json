@@ -13,14 +13,6 @@
       "name": "🚀无邪┃肥猫线路"
     },
     {
-      "url": "http://www.饭太硬.com/tv",
-      "name": "💎无邪┃饭太硬线路"
-    },
-    {
-      "url": "http://我不是.摸鱼儿.top",
-      "name": "💎无邪┃摸鱼线路"
-    },
-    {
       "url": "https://9280.kstore.space/wex.json",
       "name": "💎无邪┃王二小线路（备用）"
     },
@@ -69,8 +61,8 @@
       "name": "🚀dxawi线路"
     },
     {
-      "url": "https://szyyds.cn/tv/x.json",
-      "name": "🚀小马线路"
+      "url": "http://xhztv.top/xhz",
+      "name": "🚀小盒子"
     },
     {
       "url": "http://我不是.摸鱼儿.top",
@@ -81,16 +73,8 @@
       "name": "😹影视资源"
     },
     {
-      "url": "https://jihulab.com/xuanzhuapp/xzys/-/raw/main/xzvip.json",
-      "name": "😹玄珠"
-    },
-    {
       "url": "https://dxawi.github.io/0/0.json",
       "name": "🐹dxawi"
-    },
-    {
-      "url": "https://api.hgyx.vip/hgyx.json",
-      "name": "🍯HG"
     },
     {
       "url": "https://ghproxy.net/raw.githubusercontent.com/gaotianliuyun/gao/master/0825.json",
@@ -103,6 +87,30 @@
     {
       "url": "https://pastebin.com/raw/yMNq26ND",
       "name": "🚀大全线路1"
+    },
+    {
+      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/ghproxy/gaotianliuyun_0827.json",
+      "name": "tv_ghproxy_gaotianliuyun_0827.json"
+    },
+    {
+      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/kk/gaotianliuyun_0827.json",
+      "name": "tv_kk_gaotianliuyun_0827.json"
+    },
+    {
+      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/jsdelivr/gaotianliuyun_0827.json",
+      "name": "tv_jsdelivr_gaotianliuyun_0827.json"
+    },
+    {
+      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/ghproxy/gaotianliuyun_0827.json",
+      "name": "tv_ghproxy_gaotianliuyun_0827.json"
+    },
+    {
+      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/moeyy/gaotianliuyun_0827.json",
+      "name": "tv_moeyy_gaotianliuyun_0827.json"
+    },
+    {
+      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/fastly/gaotianliuyun_0827.json",
+      "name": "tv_fastly_gaotianliuyun_0827.json"
     },
     {
       "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/ghproxy/0821.json",
@@ -127,6 +135,30 @@
     {
       "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/fastly/0821.json",
       "name": "tv_fastly_0821.json"
+    },
+    {
+      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/ghproxy/gaotianliuyun_0707.json",
+      "name": "tv_ghproxy_gaotianliuyun_0707.json"
+    },
+    {
+      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/kk/gaotianliuyun_0707.json",
+      "name": "tv_kk_gaotianliuyun_0707.json"
+    },
+    {
+      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/jsdelivr/gaotianliuyun_0707.json",
+      "name": "tv_jsdelivr_gaotianliuyun_0707.json"
+    },
+    {
+      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/ghproxy/gaotianliuyun_0707.json",
+      "name": "tv_ghproxy_gaotianliuyun_0707.json"
+    },
+    {
+      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/moeyy/gaotianliuyun_0707.json",
+      "name": "tv_moeyy_gaotianliuyun_0707.json"
+    },
+    {
+      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/fastly/gaotianliuyun_0707.json",
+      "name": "tv_fastly_gaotianliuyun_0707.json"
     },
     {
       "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/ghproxy/gaotianliuyun_0821.json",
@@ -177,54 +209,6 @@
       "name": "tv_fastly_gaotianliuyun_0825.json"
     },
     {
-      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/ghproxy/gaotianliuyun_0707.json",
-      "name": "tv_ghproxy_gaotianliuyun_0707.json"
-    },
-    {
-      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/kk/gaotianliuyun_0707.json",
-      "name": "tv_kk_gaotianliuyun_0707.json"
-    },
-    {
-      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/jsdelivr/gaotianliuyun_0707.json",
-      "name": "tv_jsdelivr_gaotianliuyun_0707.json"
-    },
-    {
-      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/ghproxy/gaotianliuyun_0707.json",
-      "name": "tv_ghproxy_gaotianliuyun_0707.json"
-    },
-    {
-      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/moeyy/gaotianliuyun_0707.json",
-      "name": "tv_moeyy_gaotianliuyun_0707.json"
-    },
-    {
-      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/fastly/gaotianliuyun_0707.json",
-      "name": "tv_fastly_gaotianliuyun_0707.json"
-    },
-    {
-      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/ghproxy/gaotianliuyun_0827.json",
-      "name": "tv_ghproxy_gaotianliuyun_0827.json"
-    },
-    {
-      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/kk/gaotianliuyun_0827.json",
-      "name": "tv_kk_gaotianliuyun_0827.json"
-    },
-    {
-      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/jsdelivr/gaotianliuyun_0827.json",
-      "name": "tv_jsdelivr_gaotianliuyun_0827.json"
-    },
-    {
-      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/ghproxy/gaotianliuyun_0827.json",
-      "name": "tv_ghproxy_gaotianliuyun_0827.json"
-    },
-    {
-      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/moeyy/gaotianliuyun_0827.json",
-      "name": "tv_moeyy_gaotianliuyun_0827.json"
-    },
-    {
-      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/fastly/gaotianliuyun_0827.json",
-      "name": "tv_fastly_gaotianliuyun_0827.json"
-    },
-    {
       "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/ghproxy/gaotianliuyun_0826.json",
       "name": "tv_ghproxy_gaotianliuyun_0826.json"
     },
@@ -273,30 +257,6 @@
       "name": "tv_fastly_0825.json"
     },
     {
-      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/ghproxy/0827.json",
-      "name": "tv_ghproxy_0827.json"
-    },
-    {
-      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/kk/0827.json",
-      "name": "tv_kk_0827.json"
-    },
-    {
-      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/jsdelivr/0827.json",
-      "name": "tv_jsdelivr_0827.json"
-    },
-    {
-      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/ghproxy/0827.json",
-      "name": "tv_ghproxy_0827.json"
-    },
-    {
-      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/moeyy/0827.json",
-      "name": "tv_moeyy_0827.json"
-    },
-    {
-      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/fastly/0827.json",
-      "name": "tv_fastly_0827.json"
-    },
-    {
       "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/ghproxy/0826.json",
       "name": "tv_ghproxy_0826.json"
     },
@@ -321,76 +281,28 @@
       "name": "tv_fastly_0826.json"
     },
     {
-      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/ghproxy/js.json",
-      "name": "tv_ghproxy_js.json"
+      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/ghproxy/0827.json",
+      "name": "tv_ghproxy_0827.json"
     },
     {
-      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/kk/js.json",
-      "name": "tv_kk_js.json"
+      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/kk/0827.json",
+      "name": "tv_kk_0827.json"
     },
     {
-      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/jsdelivr/js.json",
-      "name": "tv_jsdelivr_js.json"
+      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/jsdelivr/0827.json",
+      "name": "tv_jsdelivr_0827.json"
     },
     {
-      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/ghproxy/js.json",
-      "name": "tv_ghproxy_js.json"
+      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/ghproxy/0827.json",
+      "name": "tv_ghproxy_0827.json"
     },
     {
-      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/moeyy/js.json",
-      "name": "tv_moeyy_js.json"
+      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/moeyy/0827.json",
+      "name": "tv_moeyy_0827.json"
     },
     {
-      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/fastly/js.json",
-      "name": "tv_fastly_js.json"
-    },
-    {
-      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/ghproxy/franksun1211_0706.json",
-      "name": "tv_ghproxy_franksun1211_0706.json"
-    },
-    {
-      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/kk/franksun1211_0706.json",
-      "name": "tv_kk_franksun1211_0706.json"
-    },
-    {
-      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/jsdelivr/franksun1211_0706.json",
-      "name": "tv_jsdelivr_franksun1211_0706.json"
-    },
-    {
-      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/ghproxy/franksun1211_0706.json",
-      "name": "tv_ghproxy_franksun1211_0706.json"
-    },
-    {
-      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/moeyy/franksun1211_0706.json",
-      "name": "tv_moeyy_franksun1211_0706.json"
-    },
-    {
-      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/fastly/franksun1211_0706.json",
-      "name": "tv_fastly_franksun1211_0706.json"
-    },
-    {
-      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/ghproxy/XYQ.json",
-      "name": "tv_ghproxy_XYQ.json"
-    },
-    {
-      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/kk/XYQ.json",
-      "name": "tv_kk_XYQ.json"
-    },
-    {
-      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/jsdelivr/XYQ.json",
-      "name": "tv_jsdelivr_XYQ.json"
-    },
-    {
-      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/ghproxy/XYQ.json",
-      "name": "tv_ghproxy_XYQ.json"
-    },
-    {
-      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/moeyy/XYQ.json",
-      "name": "tv_moeyy_XYQ.json"
-    },
-    {
-      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/fastly/XYQ.json",
-      "name": "tv_fastly_XYQ.json"
+      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/fastly/0827.json",
+      "name": "tv_fastly_0827.json"
     },
     {
       "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/ghproxy/yw88075_js.json",
@@ -417,6 +329,78 @@
       "name": "tv_fastly_yw88075_js.json"
     },
     {
+      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/ghproxy/XYQ.json",
+      "name": "tv_ghproxy_XYQ.json"
+    },
+    {
+      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/kk/XYQ.json",
+      "name": "tv_kk_XYQ.json"
+    },
+    {
+      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/jsdelivr/XYQ.json",
+      "name": "tv_jsdelivr_XYQ.json"
+    },
+    {
+      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/ghproxy/XYQ.json",
+      "name": "tv_ghproxy_XYQ.json"
+    },
+    {
+      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/moeyy/XYQ.json",
+      "name": "tv_moeyy_XYQ.json"
+    },
+    {
+      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/fastly/XYQ.json",
+      "name": "tv_fastly_XYQ.json"
+    },
+    {
+      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/ghproxy/franksun1211_0706.json",
+      "name": "tv_ghproxy_franksun1211_0706.json"
+    },
+    {
+      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/kk/franksun1211_0706.json",
+      "name": "tv_kk_franksun1211_0706.json"
+    },
+    {
+      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/jsdelivr/franksun1211_0706.json",
+      "name": "tv_jsdelivr_franksun1211_0706.json"
+    },
+    {
+      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/ghproxy/franksun1211_0706.json",
+      "name": "tv_ghproxy_franksun1211_0706.json"
+    },
+    {
+      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/moeyy/franksun1211_0706.json",
+      "name": "tv_moeyy_franksun1211_0706.json"
+    },
+    {
+      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/fastly/franksun1211_0706.json",
+      "name": "tv_fastly_franksun1211_0706.json"
+    },
+    {
+      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/ghproxy/js.json",
+      "name": "tv_ghproxy_js.json"
+    },
+    {
+      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/kk/js.json",
+      "name": "tv_kk_js.json"
+    },
+    {
+      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/jsdelivr/js.json",
+      "name": "tv_jsdelivr_js.json"
+    },
+    {
+      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/ghproxy/js.json",
+      "name": "tv_ghproxy_js.json"
+    },
+    {
+      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/moeyy/js.json",
+      "name": "tv_moeyy_js.json"
+    },
+    {
+      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/fastly/js.json",
+      "name": "tv_fastly_js.json"
+    },
+    {
       "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/ghproxy/xianyuyimu_一木自用.json",
       "name": "tv_ghproxy_xianyuyimu_一木自用.json"
     },
@@ -439,30 +423,6 @@
     {
       "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/fastly/xianyuyimu_一木自用.json",
       "name": "tv_fastly_xianyuyimu_一木自用.json"
-    },
-    {
-      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/ghproxy/Dong-learn9_tvbox2.json",
-      "name": "tv_ghproxy_Dong-learn9_tvbox2.json"
-    },
-    {
-      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/kk/Dong-learn9_tvbox2.json",
-      "name": "tv_kk_Dong-learn9_tvbox2.json"
-    },
-    {
-      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/jsdelivr/Dong-learn9_tvbox2.json",
-      "name": "tv_jsdelivr_Dong-learn9_tvbox2.json"
-    },
-    {
-      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/ghproxy/Dong-learn9_tvbox2.json",
-      "name": "tv_ghproxy_Dong-learn9_tvbox2.json"
-    },
-    {
-      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/moeyy/Dong-learn9_tvbox2.json",
-      "name": "tv_moeyy_Dong-learn9_tvbox2.json"
-    },
-    {
-      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/fastly/Dong-learn9_tvbox2.json",
-      "name": "tv_fastly_Dong-learn9_tvbox2.json"
     },
     {
       "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/ghproxy/liu673cn_m.json",
@@ -489,6 +449,30 @@
       "name": "tv_fastly_liu673cn_m.json"
     },
     {
+      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/ghproxy/Dong-learn9_tvbox2.json",
+      "name": "tv_ghproxy_Dong-learn9_tvbox2.json"
+    },
+    {
+      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/kk/Dong-learn9_tvbox2.json",
+      "name": "tv_kk_Dong-learn9_tvbox2.json"
+    },
+    {
+      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/jsdelivr/Dong-learn9_tvbox2.json",
+      "name": "tv_jsdelivr_Dong-learn9_tvbox2.json"
+    },
+    {
+      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/ghproxy/Dong-learn9_tvbox2.json",
+      "name": "tv_ghproxy_Dong-learn9_tvbox2.json"
+    },
+    {
+      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/moeyy/Dong-learn9_tvbox2.json",
+      "name": "tv_moeyy_Dong-learn9_tvbox2.json"
+    },
+    {
+      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/fastly/Dong-learn9_tvbox2.json",
+      "name": "tv_fastly_Dong-learn9_tvbox2.json"
+    },
+    {
       "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/ghproxy/anaer_meow.json",
       "name": "tv_ghproxy_anaer_meow.json"
     },
@@ -511,30 +495,6 @@
     {
       "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/fastly/anaer_meow.json",
       "name": "tv_fastly_anaer_meow.json"
-    },
-    {
-      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/ghproxy/hackyjso_jzy.json",
-      "name": "tv_ghproxy_hackyjso_jzy.json"
-    },
-    {
-      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/kk/hackyjso_jzy.json",
-      "name": "tv_kk_hackyjso_jzy.json"
-    },
-    {
-      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/jsdelivr/hackyjso_jzy.json",
-      "name": "tv_jsdelivr_hackyjso_jzy.json"
-    },
-    {
-      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/ghproxy/hackyjso_jzy.json",
-      "name": "tv_ghproxy_hackyjso_jzy.json"
-    },
-    {
-      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/moeyy/hackyjso_jzy.json",
-      "name": "tv_moeyy_hackyjso_jzy.json"
-    },
-    {
-      "url": "https://fastly.jsdelivr.net/gh/xuexuguang/tvbox_spider@main/tv/fastly/hackyjso_jzy.json",
-      "name": "tv_fastly_hackyjso_jzy.json"
     }
   ]
 }
